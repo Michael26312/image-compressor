@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta name="google-site-verification" content="k7MQL1jXPdVfLjyHLAeS8Y8Y-y5WizJmyNq6MfEju1k" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Compress JPG Online Free – Reduce JPG File Size</title>
 
-  <meta name="description" content="Compress JPG images online for free. Reduce JPG file size quickly while keeping good image quality. No software installation required.">
+  <meta name="description" content="Compress JPG images online for free. Reduce JPG file size while keeping good image quality. No upload required.">
 
   <meta name="robots" content="index, follow">
 
+  <link rel="canonical" href="https://michael26312.github.io/image-compressor/compress-jpg.html">
+
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -32,39 +38,85 @@
 
     header h1 {
       margin: 0 0 10px;
-      font-size: 30px;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 17px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 30px auto;
       padding: 0 20px;
     }
 
-    .card {
+    .tool,
+    .info {
       background: white;
       padding: 30px;
       border-radius: 14px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .upload-box {
+      border: 3px dashed #2563eb;
+      border-radius: 14px;
+      padding: 35px 20px;
+      background: #f8fafc;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #imageInput {
+      display: none;
+    }
+
+    .upload-button,
+    button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 13px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .upload-note {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .quality-label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #quality {
+      width: 100%;
+    }
+
+    #qualityValue {
+      color: #2563eb;
+    }
+
+    #result {
+      margin-top: 25px;
       text-align: center;
     }
 
-    .compress-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 13px 22px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .download {
+      background: #16a34a;
     }
 
     .info {
-      background: white;
       margin-top: 25px;
-      padding: 25px;
-      border-radius: 14px;
     }
 
     .info h2 {
@@ -73,72 +125,130 @@
 
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px;
       color: #64748b;
       font-size: 14px;
     }
+
   </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Compress JPG Online for Free</h1>
-  <p>Reduce JPG file size quickly and easily.</p>
+
+  <h1>Compress JPG Online</h1>
+
+  <p>
+    Reduce JPG file size quickly and easily for free.
+  </p>
+
 </header>
 
 <main class="container">
 
-  <section class="card">
+  <section class="tool">
+
     <h2>Free JPG Compressor</h2>
 
     <p>
-      Need to make a JPG image smaller? Our free online image compressor
-      helps you reduce JPG file size quickly without installing software.
+      Select a JPG image, choose your compression quality,
+      and download a smaller JPG file.
     </p>
 
-    <a class="compress-link" href="index.html">
-      Compress Your JPG Image
-    </a>
+    <div class="upload-box">
+
+      <div style="font-size:45px;">📷</div>
+
+      <h3>Select Your JPG Image</h3>
+
+      <label for="imageInput" class="upload-button">
+        Choose JPG Image
+      </label>
+
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/jpeg"
+      >
+
+      <p class="upload-note">
+        JPG and JPEG files supported
+      </p>
+
+    </div>
+
+    <label class="quality-label">
+
+      Compression Quality:
+      <span id="qualityValue">70%</span>
+
+    </label>
+
+    <input
+      type="range"
+      id="quality"
+      min="10"
+      max="100"
+      value="70"
+    >
+
+    <br>
+
+    <button id="compressBtn">
+      Compress JPG
+    </button>
+
+    <div id="result"></div>
+
   </section>
+
 
   <section class="info">
 
-    <h2>How to Compress a JPG Image</h2>
+    <h2>Compress JPG Online for Free</h2>
+
+    <p>
+      Use this free JPG compressor to reduce the file size
+      of your JPEG images without installing software.
+    </p>
+
+    <h2>Why Compress JPG Images?</h2>
+
+    <p>
+      Large JPG files can take longer to upload, send and load
+      on websites. Compressing JPG images can reduce file size
+      and help save storage and bandwidth.
+    </p>
+
+    <h2>How to Compress a JPG</h2>
 
     <ol>
-      <li>Open our free image compressor.</li>
-      <li>Select your JPG image.</li>
+
+      <li>Select a JPG or JPEG image.</li>
+
       <li>Choose your preferred compression quality.</li>
-      <li>Click "Compress Image."</li>
-      <li>Download your smaller JPG file.</li>
+
+      <li>Click "Compress JPG".</li>
+
+      <li>Download your compressed JPG image.</li>
+
     </ol>
 
-    <h2>Why Reduce JPG File Size?</h2>
+    <h2>Is My JPG Uploaded?</h2>
 
     <p>
-      Large JPG files can take longer to upload, send and load on websites.
-      Compressing JPG images can help reduce file size and make them easier
-      to share through email, messaging apps and websites.
+      No. Your image is processed directly in your web browser.
+      The image does not need to be uploaded to a server.
     </p>
 
-    <h2>Free JPG Compression</h2>
+    <h2>Free JPEG Compressor</h2>
 
     <p>
-      You can use our JPG compressor directly from your browser on a phone,
-      tablet or computer. No special software is required.
-    </p>
-
-    <h2>Compress JPG Images on Your Phone</h2>
-
-    <p>
-      Whether you are using Android, iPhone, Windows or another device,
-      you can use our online image compressor to reduce the size of your
-      JPG images.
-    </p>
-
-    <p>
-      <a href="index.html">Go back to the Free Image Compressor</a>
+      JPG and JPEG are commonly used image formats for photographs
+      and digital images. This tool helps reduce their file size
+      while maintaining useful image quality.
     </p>
 
   </section>
@@ -146,8 +256,185 @@
 </main>
 
 <footer>
-  <p>Free JPG Compressor — Simple, fast and easy to use.</p>
+
+  <p>
+    Free Image Compressor — Compress JPG, PNG and WebP images online.
+  </p>
+
 </footer>
 
+
+<script>
+
+  const imageInput =
+    document.getElementById("imageInput");
+
+  const quality =
+    document.getElementById("quality");
+
+  const qualityValue =
+    document.getElementById("qualityValue");
+
+  const compressBtn =
+    document.getElementById("compressBtn");
+
+  const result =
+    document.getElementById("result");
+
+
+  quality.addEventListener("input", function() {
+
+    qualityValue.textContent =
+      quality.value + "%";
+
+  });
+
+
+  compressBtn.addEventListener("click", function() {
+
+    const file =
+      imageInput.files[0];
+
+    if (!file) {
+
+      result.innerHTML =
+        "<p>Please select a JPG image first.</p>";
+
+      return;
+
+    }
+
+
+    if (file.type !== "image/jpeg") {
+
+      result.innerHTML =
+        "<p>Please select a JPG or JPEG image.</p>";
+
+      return;
+
+    }
+
+
+    result.innerHTML =
+      "<p>Compressing JPG...</p>";
+
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload = function(event) {
+
+      const img =
+        new Image();
+
+
+      img.onload = function() {
+
+        const canvas =
+          document.createElement("canvas");
+
+        const ctx =
+          canvas.getContext("2d");
+
+
+        canvas.width =
+          img.width;
+
+        canvas.height =
+          img.height;
+
+
+        ctx.drawImage(
+          img,
+          0,
+          0
+        );
+
+
+        const compressionQuality =
+          Number(quality.value) / 100;
+
+
+        canvas.toBlob(function(blob) {
+
+          if (!blob) {
+
+            result.innerHTML =
+              "<p>Compression failed. Please try another JPG.</p>";
+
+            return;
+
+          }
+
+
+          const originalKB =
+            (file.size / 1024).toFixed(1);
+
+
+          const compressedKB =
+            (blob.size / 1024).toFixed(1);
+
+
+          const reduction =
+            Math.max(
+              0,
+              (
+                (file.size - blob.size) /
+                file.size *
+                100
+              )
+            ).toFixed(1);
+
+
+          const url =
+            URL.createObjectURL(blob);
+
+
+          result.innerHTML =
+
+            "<h3>Compression Complete!</h3>" +
+
+            "<p><strong>Original:</strong> " +
+            originalKB +
+            " KB</p>" +
+
+            "<p><strong>Compressed:</strong> " +
+            compressedKB +
+            " KB</p>" +
+
+            "<p><strong>Size reduced by:</strong> " +
+            reduction +
+            "%</p>" +
+
+            "<a href='" +
+            url +
+            "' download='compressed-" +
+            file.name.replace(/\.[^/.]+$/, "") +
+            ".jpg'>" +
+
+            "<button class='download'>" +
+            "Download Compressed JPG" +
+            "</button>" +
+
+            "</a>";
+
+        }, "image/jpeg", compressionQuality);
+
+      };
+
+
+      img.src =
+        event.target.result;
+
+    };
+
+
+    reader.readAsDataURL(file);
+
+  });
+
+</script>
+
 </body>
-</html>
+  </html>
