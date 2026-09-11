@@ -179,6 +179,17 @@
       word-break: break-word;
     }
 
+    .format-label {
+      display: inline-block;
+      background: #e0edff;
+      color: #1d4ed8;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
     .download-single {
       background: #16a34a;
       margin-top: 10px;
@@ -316,7 +327,7 @@
       <li>Select one or more images from your device.</li>
       <li>Choose your preferred compression quality.</li>
       <li>Click "Compress Images".</li>
-      <li>Download individual images or download all images.</li>
+      <li>Download your compressed images.</li>
     </ol>
 
     <h2>Is My Image Uploaded?</h2>
@@ -329,8 +340,8 @@
     <h2>Supported Image Formats</h2>
 
     <p>
-      This free image compressor accepts JPG, JPEG, PNG and WebP images.
-      It works on smartphones, tablets and computers.
+      This free image compressor accepts JPG, JPEG, PNG and WebP images
+      and preserves the original image format when creating the compressed file.
     </p>
 
   </section>
@@ -443,7 +454,9 @@
 
           compressedSize: compressedBlob.size,
 
-          blob: compressedBlob
+          blob: compressedBlob,
+
+          type: file.type
 
         });
 
@@ -490,13 +503,20 @@
           )
         ).toFixed(1);
 
+      const format =
+        getFormatName(image.type);
+
       html +=
 
         "<div class='image-result'>" +
 
         "<strong>" +
         escapeHTML(image.name) +
-        "</strong><br><br>" +
+        "</strong><br>" +
+
+        "<span class='format-label'>" +
+        format +
+        "</span><br><br>" +
 
         "Original: " +
         originalKB +
@@ -561,6 +581,16 @@
           const compressionQuality =
             Number(quality.value) / 100;
 
+          let outputType = file.type;
+
+          if (
+            outputType !== "image/jpeg" &&
+            outputType !== "image/png" &&
+            outputType !== "image/webp"
+          ) {
+            outputType = "image/jpeg";
+          }
+
           canvas.toBlob(
 
             function (blob) {
@@ -580,7 +610,7 @@
 
             },
 
-            "image/jpeg",
+            outputType,
 
             compressionQuality
 
@@ -619,6 +649,42 @@
 
   }
 
+  function getFormatName(type) {
+
+    if (type === "image/jpeg") {
+      return "JPG";
+    }
+
+    if (type === "image/png") {
+      return "PNG";
+    }
+
+    if (type === "image/webp") {
+      return "WebP";
+    }
+
+    return "Image";
+
+  }
+
+  function getFileExtension(type) {
+
+    if (type === "image/jpeg") {
+      return "jpg";
+    }
+
+    if (type === "image/png") {
+      return "png";
+    }
+
+    if (type === "image/webp") {
+      return "webp";
+    }
+
+    return "jpg";
+
+  }
+
   function downloadImage(index) {
 
     const image =
@@ -638,13 +704,22 @@
 
     link.href = url;
 
-    link.download =
-      "compressed-" +
+    const originalName =
       image.name.replace(
         /\.[^/.]+$/,
         ""
-      ) +
-      ".jpg";
+      );
+
+    const extension =
+      getFileExtension(
+        image.type
+      );
+
+    link.download =
+      "compressed-" +
+      originalName +
+      "." +
+      extension;
 
     document.body.appendChild(link);
 
