@@ -165,6 +165,7 @@
       type="file"
       id="imageInput"
       accept="image/jpeg,image/png,image/webp"
+      multiple 
     >
 
     <label for="quality">
@@ -229,7 +230,6 @@
 <footer>
   <p>Free Image Compressor — Simple, fast and easy to use.</p>
 </footer>
-
 <script>
   const imageInput = document.getElementById("imageInput");
   const quality = document.getElementById("quality");
@@ -238,97 +238,163 @@
   const downloadBtn = document.getElementById("downloadBtn");
   const result = document.getElementById("result");
 
-  let compressedBlob = null;
+  let compressedImages = [];
 
   quality.addEventListener("input", function () {
     qualityValue.textContent = quality.value + "%";
   });
 
-  compressBtn.addEventListener("click", function () {
+  compressBtn.addEventListener("click", async function () {
 
-    const file = imageInput.files[0];
+    const files = Array.from(imageInput.files);
 
-    if (!file) {
-      result.textContent = "Please select an image first.";
+    if (files.length === 0) {
+      result.textContent = "Please select at least one image.";
       return;
     }
 
-    if (!file.type.startsWith("image/")) {
-      result.textContent = "Please select a valid image.";
+    compressedImages = [];
+    result.innerHTML = "Compressing your images...";
+
+    for (const file of files) {
+
+      if (!file.type.startsWith("image/")) {
+        continue;
+      }
+
+      try {
+
+        const compressedBlob = await compressImage(file);
+
+        compressedImages.push({
+          name: file.name,
+          originalSize: file.size,
+          compressedSize: compressedBlob.size,
+          blob: compressedBlob
+        });
+
+      } catch (error) {
+        console.error("Compression error:", error);
+      }
+    }
+
+    if (compressedImages.length === 0) {
+      result.textContent = "Compression failed. Please try another image.";
       return;
     }
 
-    const reader = new FileReader();
+    let html = "<strong>Compression Complete!</strong><br><br>";
 
-    reader.onload = function (event) {
+    compressedImages.forEach(function (image, index) {
 
-      const img = new Image();
+      const originalKB = (image.originalSize / 1024).toFixed(1);
+      const compressedKB = (image.compressedSize / 1024).toFixed(1);
 
-      img.onload = function () {
+      const reduction = Math.max(
+        0,
+        ((image.originalSize - image.compressedSize) /
+          image.originalSize * 100)
+      ).toFixed(1);
 
-        const canvas = document.createElement("canvas");
-        const ctx = canvas.getContext("2d");
+      html +=
+        "<div style='margin-bottom:15px;'>" +
+        "<strong>" + image.name + "</strong><br>" +
+        "Original: " + originalKB + " KB<br>" +
+        "Compressed: " + compressedKB + " KB<br>" +
+        "Size reduced by: " + reduction + "%<br>" +
+        "<button onclick='downloadImage(" + index + ")'>Download</button>" +
+        "</div>";
+    });
 
-        canvas.width = img.width;
-        canvas.height = img.height;
+    result.innerHTML = html;
 
-        ctx.drawImage(img, 0, 0);
-
-        const compressionQuality = Number(quality.value) / 100;
-
-        canvas.toBlob(function (blob) {
-
-          if (!blob) {
-            result.textContent = "Compression failed. Please try another image.";
-            return;
-          }
-
-          compressedBlob = blob;
-
-          const originalKB = (file.size / 1024).toFixed(1);
-          const compressedKB = (blob.size / 1024).toFixed(1);
-
-          const reduction = Math.max(
-            0,
-            ((file.size - blob.size) / file.size * 100)
-          ).toFixed(1);
-
-          result.innerHTML =
-            "Original: " + originalKB + " KB<br>" +
-            "Compressed: " + compressedKB + " KB<br>" +
-            "Size reduced by: " + reduction + "%";
-
-          downloadBtn.style.display = "inline-block";
-
-        }, "image/jpeg", compressionQuality);
-
-      };
-
-      img.src = event.target.result;
-    };
-
-    reader.readAsDataURL(file);
+    downloadBtn.style.display = "none";
   });
 
-  downloadBtn.addEventListener("click", function () {
+  function compressImage(file) {
 
-    if (!compressedBlob) {
+    return new Promise(function (resolve, reject) {
+
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+
+        const img = new Image();
+
+        img.onload = function () {
+
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+          ctx.drawImage(img, 0, 0);
+
+          const compressionQuality =
+            Number(quality.value) / 100;
+
+          canvas.toBlob(function (blob) {
+
+            if (!blob) {
+              reject(new Error("Compression failed"));
+              return;
+            }
+
+            resolve(blob);
+
+          }, "image/jpeg", compressionQuality);
+        };
+
+        img.onerror = function () {
+          reject(new Error("Could not read image"));
+        };
+
+        img.src = event.target.result;
+      };
+
+      reader.onerror = function () {
+        reject(new Error("Could not read file"));
+      };
+
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function downloadImage(index) {
+
+    const image = compressedImages[index];
+
+    if (!image) {
       return;
     }
 
-    const url = URL.createObjectURL(compressedBlob);
+    const url = URL.createObjectURL(image.blob);
 
     const link = document.createElement("a");
+
     link.href = url;
-    link.download = "compressed-image.jpg";
+
+    link.download =
+      "compressed-" +
+      image.name.replace(/\.[^/.]+$/, "") +
+      ".jpg";
 
     document.body.appendChild(link);
+
     link.click();
+
     document.body.removeChild(link);
 
     URL.revokeObjectURL(url);
-  });
+  }
 </script>
+
+  
+          
+
+      
+
 
 </body>
 </html>
