@@ -6,9 +6,49 @@
 
   <title>Compress WebP Online Free – Reduce WebP File Size</title>
 
-  <meta name="description" content="Compress WebP images online for free. Reduce WebP file size quickly and easily without installing software.">
+  <meta name="description" content="Compress WebP images online for free. Reduce WebP file size while keeping good image quality. Fast, private, and no upload required.">
+
+  <meta name="keywords" content="compress WebP, WebP compressor, reduce WebP file size, WebP image compressor, compress WebP online">
 
   <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://michael26312.github.io/image-compressor/compress-webp.html">
+
+  <meta property="og:title" content="Compress WebP Online Free – Reduce WebP File Size">
+  <meta property="og:description" content="Compress WebP images online for free. Reduce WebP file size without uploading your image to a server.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michael26312.github.io/image-compressor/compress-webp.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compress WebP Online Free">
+  <meta name="twitter:description" content="Reduce WebP image file size online for free. Fast, private and browser-based.">
+
+  <meta name="google-site-verification" content="k7MQL1jXPdVfLjyHLAeS8Y8Y-y5WizJmyNq6MfEju1k">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free WebP Compressor",
+    "url": "https://michael26312.github.io/image-compressor/compress-webp.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern web browser",
+    "description": "A free online WebP image compressor that reduces WebP file size directly in the browser.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Compress WebP images",
+      "Reduce WebP file size",
+      "Adjust image quality",
+      "Process images in the browser",
+      "No image upload required"
+    ]
+  }
+  </script>
 
   <style>
     * {
@@ -17,65 +57,267 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #2563eb;
+      background: #1769e0;
       color: white;
-      padding: 35px 20px;
-      text-align: center;
+      padding: 18px 20px;
     }
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 30px;
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .compress-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 13px 22px;
-      background: #2563eb;
+    .logo {
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      font-size: 22px;
       font-weight: bold;
     }
 
-    .info {
-      background: white;
-      margin-top: 25px;
-      padding: 25px;
-      border-radius: 14px;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .info h2 {
-      color: #1d4ed8;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 50px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .compressor-box {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .upload-area {
+      border: 2px dashed #1769e0;
+      border-radius: 12px;
+      padding: 35px 20px;
+      cursor: pointer;
+      background: #f8fbff;
+      transition: 0.2s;
+    }
+
+    .upload-area:hover {
+      background: #eef5ff;
+    }
+
+    .upload-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1769e0;
+    }
+
+    .upload-area p {
+      margin: 8px 0;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .choose-btn,
+    .compress-btn,
+    .download-btn {
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .choose-btn {
+      background: #1769e0;
+      color: white;
+      display: inline-block;
+    }
+
+    .compress-btn {
+      background: #16a34a;
+      color: white;
+      width: 100%;
+    }
+
+    .compress-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .quality-box {
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    .quality-box label {
+      font-weight: bold;
+    }
+
+    #qualityValue {
+      font-weight: bold;
+      color: #1769e0;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    #fileInfo {
+      margin-top: 15px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    #results {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .result-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #fafafa;
+    }
+
+    .result-card strong {
+      display: block;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+
+    .result-card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .download-btn {
+      background: #111827;
+      color: white;
+      width: 100%;
+    }
+
+    .content-section {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .content-section h2 {
+      color: #111827;
+      margin-top: 0;
+    }
+
+    .content-section a {
+      color: #1769e0;
+      font-weight: bold;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .benefit h3 {
+      margin-top: 0;
+      color: #1769e0;
     }
 
     footer {
+      background: #111827;
+      color: #d1d5db;
       text-align: center;
-      padding: 30px 20px;
-      color: #64748b;
+      padding: 25px 20px;
       font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .compressor-box,
+      .content-section {
+        padding: 20px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -83,69 +325,572 @@
 <body>
 
 <header>
-  <h1>Compress WebP Online for Free</h1>
-  <p>Reduce WebP file size quickly and easily.</p>
+  <div class="header-inner">
+
+    <a class="logo" href="index.html">
+      Free Image Compressor
+    </a>
+
+    <nav>
+      <a href="index.html">Image Compressor</a>
+      <a href="compress-jpg.html">Compress JPG</a>
+      <a href="compress-png.html">Compress PNG</a>
+      <a href="compress-webp.html">Compress WebP</a>
+    </nav>
+
+  </div>
 </header>
 
-<main class="container">
+<main>
 
-  <section class="card">
-    <h2>Free WebP Compressor</h2>
+  <section class="hero">
+
+    <h1>Compress WebP Online Free</h1>
 
     <p>
-      Need to make a WebP image smaller? Our free online image compressor
-      helps you reduce image file size without installing software.
+      Reduce WebP image file sizes online for free.
+      Adjust image quality and compress WebP images directly
+      in your browser without uploading your files.
     </p>
 
-    <a class="compress-link" href="index.html">
-      Compress Your WebP Image
-    </a>
   </section>
 
-  <section class="info">
+
+  <section class="compressor-box">
+
+    <div class="upload-area" id="uploadArea">
+
+      <div class="upload-title">
+        Choose a WebP Image
+      </div>
+
+      <p>
+        Select a WebP image from your device.
+      </p>
+
+      <label class="choose-btn" for="fileInput">
+        Choose WebP Image
+      </label>
+
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/webp"
+      >
+
+    </div>
+
+
+    <div id="fileInfo">
+      No image selected.
+    </div>
+
+
+    <div class="quality-box">
+
+      <label for="quality">
+        Compression Quality:
+        <span id="qualityValue">70%</span>
+      </label>
+
+      <input
+        type="range"
+        id="quality"
+        min="10"
+        max="100"
+        value="70"
+      >
+
+    </div>
+
+
+    <button
+      class="compress-btn"
+      id="compressBtn"
+      disabled
+    >
+      Compress WebP
+    </button>
+
+
+    <div
+      id="results"
+      aria-live="polite"
+    ></div>
+
+  </section>
+
+
+  <section class="benefits">
+
+    <div class="benefit">
+      <h3>Free</h3>
+      <p>
+        Compress WebP images without paying for a subscription.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Private</h3>
+      <p>
+        Your image is processed directly in your browser.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Easy</h3>
+      <p>
+        Choose a WebP image, select quality and download the result.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>What Is a WebP Compressor?</h2>
+
+    <p>
+      A WebP compressor reduces the file size of WebP images while
+      allowing you to control the image quality.
+    </p>
+
+    <p>
+      WebP is a modern image format designed to provide efficient
+      compression for websites and digital content.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
 
     <h2>How to Compress a WebP Image</h2>
 
     <ol>
-      <li>Open our free image compressor.</li>
-      <li>Select your WebP image.</li>
-      <li>Choose your preferred compression quality.</li>
-      <li>Click "Compress Image."</li>
-      <li>Download your compressed image.</li>
+      <li>Choose a WebP image from your device.</li>
+      <li>Select your preferred compression quality.</li>
+      <li>Click the <strong>Compress WebP</strong> button.</li>
+      <li>Compare the original and compressed file sizes.</li>
+      <li>Download your compressed WebP image.</li>
     </ol>
+
+  </section>
+
+
+  <section class="content-section">
 
     <h2>Why Reduce WebP File Size?</h2>
 
     <p>
-      Smaller WebP images can help websites load faster and make images
-      easier to upload, share and store.
-    </p>
-
-    <h2>Free WebP Compression</h2>
-
-    <p>
-      You can use our WebP compression tool directly from your browser
-      on a phone, tablet or computer. No software installation is required.
-    </p>
-
-    <h2>Compress WebP Images on Your Phone</h2>
-
-    <p>
-      Use this online WebP compressor from Android, iPhone, Windows or
-      another device with a modern web browser.
+      Smaller image files can use less storage space and may be
+      faster to transfer across the internet.
     </p>
 
     <p>
-      <a href="index.html">Go back to the Free Image Compressor</a>
+      Compressing WebP images can be useful for websites, blogs,
+      online stores, social media content and other digital projects.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Is My WebP Image Uploaded?</h2>
+
+    <p>
+      No. The compression process happens directly in your browser.
+      Your WebP image does not need to be uploaded to a remote server.
+    </p>
+
+    <p>
+      This allows you to compress images while keeping the original
+      file on your own device.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Compress JPG, PNG and WebP Images</h2>
+
+    <p>
+      Need to compress another image format?
+      Try our other free image compression tools:
+    </p>
+
+    <p>
+      <a href="compress-jpg.html">
+        Compress JPG images
+      </a>
+    </p>
+
+    <p>
+      <a href="compress-png.html">
+        Compress PNG images
+      </a>
+    </p>
+
+    <p>
+      Or return to the
+      <a href="index.html">
+        free image compressor homepage
+      </a>.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Who Can Use This WebP Compressor?</h2>
+
+    <p>
+      This tool can be useful for website owners, bloggers,
+      designers, photographers, developers, businesses and anyone
+      who needs to reduce WebP image file sizes.
+    </p>
+
+    <p>
+      You can use it on a computer, tablet or smartphone with a
+      modern web browser.
     </p>
 
   </section>
 
 </main>
 
+
 <footer>
-  <p>Free WebP Compressor — Simple, fast and easy to use.</p>
+
+  <p>
+    © 2026 Free Image Compressor
+  </p>
+
+  <p>
+    <a href="index.html">Home</a>
+    <a href="compress-jpg.html">JPG</a>
+    <a href="compress-png.html">PNG</a>
+    <a href="compress-webp.html">WebP</a>
+  </p>
+
 </footer>
 
+
+<script>
+
+  const fileInput = document.getElementById("fileInput");
+  const uploadArea = document.getElementById("uploadArea");
+  const quality = document.getElementById("quality");
+  const qualityValue = document.getElementById("qualityValue");
+  const compressBtn = document.getElementById("compressBtn");
+  const fileInfo = document.getElementById("fileInfo");
+  const results = document.getElementById("results");
+
+  let selectedFile = null;
+
+
+  quality.addEventListener("input", function() {
+
+    qualityValue.textContent = quality.value + "%";
+
+  });
+
+
+  fileInput.addEventListener("change", function() {
+
+    if (!fileInput.files.length) {
+      return;
+    }
+
+    selectedFile = fileInput.files[0];
+
+    if (selectedFile.type !== "image/webp") {
+
+      alert("Please select a WebP image.");
+
+      selectedFile = null;
+      compressBtn.disabled = true;
+      fileInfo.textContent = "No valid WebP image selected.";
+
+      return;
+    }
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
+
+  });
+
+
+  uploadArea.addEventListener("dragover", function(event) {
+
+    event.preventDefault();
+
+    uploadArea.style.background = "#eef5ff";
+
+  });
+
+
+  uploadArea.addEventListener("dragleave", function() {
+
+    uploadArea.style.background = "#f8fbff";
+
+  });
+
+
+  uploadArea.addEventListener("drop", function(event) {
+
+    event.preventDefault();
+
+    uploadArea.style.background = "#f8fbff";
+
+    const file = event.dataTransfer.files[0];
+
+    if (!file) {
+      return;
+    }
+
+    if (file.type !== "image/webp") {
+
+      alert("Please drop a WebP image.");
+
+      return;
+    }
+
+    selectedFile = file;
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
+
+  });
+
+
+  compressBtn.addEventListener("click", async function() {
+
+    if (!selectedFile) {
+      return;
+    }
+
+    compressBtn.disabled = true;
+    compressBtn.textContent = "Compressing...";
+
+    try {
+
+      const compressedBlob = await compressImage(
+        selectedFile,
+        Number(quality.value) / 100
+      );
+
+      const originalSize = selectedFile.size;
+      const compressedSize = compressedBlob.size;
+
+      let reduction = 0;
+
+      if (originalSize > 0) {
+
+        reduction =
+          ((originalSize - compressedSize) / originalSize) * 100;
+
+      }
+
+      const url = URL.createObjectURL(compressedBlob);
+
+      results.innerHTML = `
+        <div class="result-card">
+
+          <strong>
+            ${escapeHTML(selectedFile.name)}
+          </strong>
+
+          <p>
+            Original size:
+            ${formatBytes(originalSize)}
+          </p>
+
+          <p>
+            Compressed size:
+            ${formatBytes(compressedSize)}
+          </p>
+
+          <p>
+            Size reduction:
+            ${reduction.toFixed(1)}%
+          </p>
+
+          <button
+            class="download-btn"
+            id="downloadBtn"
+          >
+            Download Compressed WebP
+          </button>
+
+        </div>
+      `;
+
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function() {
+
+          const link = document.createElement("a");
+
+          link.href = url;
+
+          link.download =
+            getBaseName(selectedFile.name) +
+            "-compressed.webp";
+
+          document.body.appendChild(link);
+
+          link.click();
+
+          link.remove();
+
+        });
+
+    } catch (error) {
+
+      alert("Something went wrong while compressing the WebP image.");
+
+      console.error(error);
+
+    }
+
+    compressBtn.disabled = false;
+    compressBtn.textContent = "Compress WebP";
+
+  });
+
+
+  function compressImage(file, qualityValue) {
+
+    return new Promise(function(resolve, reject) {
+
+      const image = new Image();
+
+      const objectUrl = URL.createObjectURL(file);
+
+      image.onload = function() {
+
+        const canvas = document.createElement("canvas");
+
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        const context = canvas.getContext("2d");
+
+        context.drawImage(
+          image,
+          0,
+          0,
+          image.width,
+          image.height
+        );
+
+        canvas.toBlob(
+          function(blob) {
+
+            URL.revokeObjectURL(objectUrl);
+
+            if (blob) {
+
+              resolve(blob);
+
+            } else {
+
+              reject(
+                new Error("WebP compression failed.")
+              );
+
+            }
+
+          },
+          "image/webp",
+          qualityValue
+        );
+
+      };
+
+
+      image.onerror = function() {
+
+        URL.revokeObjectURL(objectUrl);
+
+        reject(
+          new Error("Could not read WebP image.")
+        );
+
+      };
+
+
+      image.src = objectUrl;
+
+    });
+
+  }
+
+
+  function formatBytes(bytes) {
+
+    if (bytes === 0) {
+      return "0 Bytes";
+    }
+
+    const units = [
+      "Bytes",
+      "KB",
+      "MB",
+      "GB"
+    ];
+
+    const index =
+      Math.floor(
+        Math.log(bytes) / Math.log(1024)
+      );
+
+    return (
+      parseFloat(
+        (bytes / Math.pow(1024, index)).toFixed(2)
+      ) +
+      " " +
+      units[index]
+    );
+
+  }
+
+
+  function getBaseName(filename) {
+
+    return filename.replace(/\.[^/.]+$/, "");
+
+  }
+
+
+  function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+  }
+
+</script>
+
 </body>
-</html>
+        </html>
