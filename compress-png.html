@@ -6,9 +6,49 @@
 
   <title>Compress PNG Online Free – Reduce PNG File Size</title>
 
-  <meta name="description" content="Compress PNG images online for free. Reduce PNG file size quickly and easily without installing software.">
+  <meta name="description" content="Compress PNG images online for free. Reduce PNG file size while keeping PNG format. Fast, private, and no upload required.">
+
+  <meta name="keywords" content="compress PNG, PNG compressor, reduce PNG file size, PNG image compressor, compress PNG online">
 
   <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://michael26312.github.io/image-compressor/compress-png.html">
+
+  <meta property="og:title" content="Compress PNG Online Free – Reduce PNG File Size">
+  <meta property="og:description" content="Compress PNG images online for free. Reduce PNG file size without uploading your image to a server.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michael26312.github.io/image-compressor/compress-png.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compress PNG Online Free">
+  <meta name="twitter:description" content="Reduce PNG image file size online for free. Fast, private and browser-based.">
+
+  <meta name="google-site-verification" content="k7MQL1jXPdVfLjyHLAeS8Y8Y-y5WizJmyNq6MfEju1k">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free PNG Compressor",
+    "url": "https://michael26312.github.io/image-compressor/compress-png.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern web browser",
+    "description": "A free online PNG image compressor that processes images directly in the browser.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Compress PNG images",
+      "Reduce PNG file size",
+      "Process images in the browser",
+      "No image upload required",
+      "Free PNG compression"
+    ]
+  }
+  </script>
 
   <style>
     * {
@@ -17,65 +57,271 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #2563eb;
+      background: #1769e0;
       color: white;
-      padding: 35px 20px;
-      text-align: center;
+      padding: 18px 20px;
     }
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 30px;
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .compress-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 13px 22px;
-      background: #2563eb;
+    .logo {
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      font-size: 22px;
       font-weight: bold;
     }
 
-    .info {
-      background: white;
-      margin-top: 25px;
-      padding: 25px;
-      border-radius: 14px;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .info h2 {
-      color: #1d4ed8;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 50px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .compressor-box {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .upload-area {
+      border: 2px dashed #1769e0;
+      border-radius: 12px;
+      padding: 35px 20px;
+      cursor: pointer;
+      background: #f8fbff;
+      transition: 0.2s;
+    }
+
+    .upload-area:hover {
+      background: #eef5ff;
+    }
+
+    .upload-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1769e0;
+    }
+
+    .upload-area p {
+      margin: 8px 0;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .choose-btn,
+    .compress-btn,
+    .download-btn {
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .choose-btn {
+      background: #1769e0;
+      color: white;
+      display: inline-block;
+    }
+
+    .compress-btn {
+      background: #16a34a;
+      color: white;
+      width: 100%;
+    }
+
+    .compress-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .quality-box {
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    .quality-box label {
+      font-weight: bold;
+    }
+
+    #qualityValue {
+      font-weight: bold;
+      color: #1769e0;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    #fileInfo {
+      margin-top: 15px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    #results {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .result-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #fafafa;
+    }
+
+    .result-card strong {
+      display: block;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+
+    .result-card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .download-btn {
+      background: #111827;
+      color: white;
+      width: 100%;
+    }
+
+    .content-section {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .content-section h2 {
+      color: #111827;
+      margin-top: 0;
+    }
+
+    .content-section h3 {
+      color: #1769e0;
+    }
+
+    .content-section a {
+      color: #1769e0;
+      font-weight: bold;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .benefit h3 {
+      margin-top: 0;
+      color: #1769e0;
     }
 
     footer {
+      background: #111827;
+      color: #d1d5db;
       text-align: center;
-      padding: 30px 20px;
-      color: #64748b;
+      padding: 25px 20px;
       font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .compressor-box,
+      .content-section {
+        padding: 20px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -83,69 +329,571 @@
 <body>
 
 <header>
-  <h1>Compress PNG Online for Free</h1>
-  <p>Reduce PNG file size quickly and easily.</p>
+  <div class="header-inner">
+
+    <a class="logo" href="index.html">
+      Free Image Compressor
+    </a>
+
+    <nav>
+      <a href="index.html">Image Compressor</a>
+      <a href="compress-jpg.html">Compress JPG</a>
+      <a href="compress-png.html">Compress PNG</a>
+      <a href="compress-webp.html">Compress WebP</a>
+    </nav>
+
+  </div>
 </header>
 
-<main class="container">
+<main>
 
-  <section class="card">
-    <h2>Free PNG Compressor</h2>
+  <section class="hero">
+
+    <h1>Compress PNG Online Free</h1>
 
     <p>
-      Need to make a PNG image smaller? Our free online image compressor
-      helps you reduce image file size without installing software.
+      Reduce PNG image file sizes online for free.
+      Process PNG images directly in your browser without uploading
+      your files to a server.
     </p>
 
-    <a class="compress-link" href="index.html">
-      Compress Your PNG Image
-    </a>
   </section>
 
-  <section class="info">
+
+  <section class="compressor-box">
+
+    <div class="upload-area" id="uploadArea">
+
+      <div class="upload-title">
+        Choose a PNG Image
+      </div>
+
+      <p>
+        Select a PNG image from your device.
+      </p>
+
+      <label class="choose-btn" for="fileInput">
+        Choose PNG Image
+      </label>
+
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/png"
+      >
+
+    </div>
+
+
+    <div id="fileInfo">
+      No image selected.
+    </div>
+
+
+    <div class="quality-box">
+
+      <label for="quality">
+        Compression Quality:
+        <span id="qualityValue">70%</span>
+      </label>
+
+      <input
+        type="range"
+        id="quality"
+        min="10"
+        max="100"
+        value="70"
+      >
+
+    </div>
+
+
+    <button
+      class="compress-btn"
+      id="compressBtn"
+      disabled
+    >
+      Compress PNG
+    </button>
+
+
+    <div
+      id="results"
+      aria-live="polite"
+    ></div>
+
+  </section>
+
+
+  <section class="benefits">
+
+    <div class="benefit">
+      <h3>Free</h3>
+      <p>
+        Compress PNG images without paying for a subscription.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Private</h3>
+      <p>
+        Your image is processed directly in your browser.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Easy</h3>
+      <p>
+        Choose a PNG image and download the processed file.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>What Is a PNG Compressor?</h2>
+
+    <p>
+      A PNG compressor is a tool designed to reduce the size of PNG
+      image files. Smaller files can be easier to store, share and
+      use on websites.
+    </p>
+
+    <p>
+      PNG is commonly used for graphics, screenshots, logos,
+      illustrations and images that need transparency.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
 
     <h2>How to Compress a PNG Image</h2>
 
     <ol>
-      <li>Open our free image compressor.</li>
-      <li>Select your PNG image.</li>
-      <li>Choose your preferred compression quality.</li>
-      <li>Click "Compress Image."</li>
-      <li>Download your compressed image.</li>
+      <li>Choose a PNG image from your device.</li>
+      <li>Select your preferred compression quality.</li>
+      <li>Click the <strong>Compress PNG</strong> button.</li>
+      <li>Compare the original and processed file sizes.</li>
+      <li>Download your PNG image.</li>
     </ol>
+
+  </section>
+
+
+  <section class="content-section">
 
     <h2>Why Reduce PNG File Size?</h2>
 
     <p>
-      Large PNG files can take longer to upload and share. Reducing image
-      size can help save storage space and make images easier to use online.
-    </p>
-
-    <h2>Free PNG Compression</h2>
-
-    <p>
-      You can use our image compressor directly from your browser on a
-      phone, tablet or computer. No special software is required.
-    </p>
-
-    <h2>Compress PNG Images on Your Phone</h2>
-
-    <p>
-      You can use this online PNG compression page on Android, iPhone,
-      Windows and other devices with a modern web browser.
+      Large PNG files can consume more storage space and may take
+      longer to transfer or load online.
     </p>
 
     <p>
-      <a href="index.html">Go back to the Free Image Compressor</a>
+      Reducing image file size can be useful when preparing images
+      for websites, documents, email attachments and online forms.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Is My PNG Image Uploaded?</h2>
+
+    <p>
+      No. The image processing happens directly in your browser.
+      Your PNG image does not need to be uploaded to a remote server.
+    </p>
+
+    <p>
+      This means you can process an image while keeping the original
+      file on your own device.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Compress JPG, PNG and WebP Images</h2>
+
+    <p>
+      Need to compress another image format?
+      Try our other free image compression tools:
+    </p>
+
+    <p>
+      <a href="compress-jpg.html">
+        Compress JPG images
+      </a>
+    </p>
+
+    <p>
+      <a href="compress-webp.html">
+        Compress WebP images
+      </a>
+    </p>
+
+    <p>
+      Or return to the
+      <a href="index.html">
+        free image compressor homepage
+      </a>.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Who Can Use This PNG Compressor?</h2>
+
+    <p>
+      This tool can be useful for students, website owners,
+      designers, bloggers, businesses, photographers and anyone
+      who needs to work with PNG images.
+    </p>
+
+    <p>
+      Because it runs in a modern web browser, you can use it on
+      a computer, tablet or smartphone.
     </p>
 
   </section>
 
 </main>
 
+
 <footer>
-  <p>Free PNG Compressor — Simple, fast and easy to use.</p>
+
+  <p>
+    © 2026 Free Image Compressor
+  </p>
+
+  <p>
+    <a href="index.html">Home</a>
+    <a href="compress-jpg.html">JPG</a>
+    <a href="compress-png.html">PNG</a>
+    <a href="compress-webp.html">WebP</a>
+  </p>
+
 </footer>
+
+
+<script>
+
+  const fileInput = document.getElementById("fileInput");
+  const uploadArea = document.getElementById("uploadArea");
+  const quality = document.getElementById("quality");
+  const qualityValue = document.getElementById("qualityValue");
+  const compressBtn = document.getElementById("compressBtn");
+  const fileInfo = document.getElementById("fileInfo");
+  const results = document.getElementById("results");
+
+  let selectedFile = null;
+
+
+  quality.addEventListener("input", function() {
+
+    qualityValue.textContent = quality.value + "%";
+
+  });
+
+
+  fileInput.addEventListener("change", function() {
+
+    if (!fileInput.files.length) {
+      return;
+    }
+
+    selectedFile = fileInput.files[0];
+
+    if (selectedFile.type !== "image/png") {
+
+      alert("Please select a PNG image.");
+
+      selectedFile = null;
+      compressBtn.disabled = true;
+      fileInfo.textContent = "No valid PNG image selected.";
+
+      return;
+    }
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
+
+  });
+
+
+  uploadArea.addEventListener("dragover", function(event) {
+
+    event.preventDefault();
+
+    uploadArea.style.background = "#eef5ff";
+
+  });
+
+
+  uploadArea.addEventListener("dragleave", function() {
+
+    uploadArea.style.background = "#f8fbff";
+
+  });
+
+
+  uploadArea.addEventListener("drop", function(event) {
+
+    event.preventDefault();
+
+    uploadArea.style.background = "#f8fbff";
+
+    const file = event.dataTransfer.files[0];
+
+    if (!file) {
+      return;
+    }
+
+    if (file.type !== "image/png") {
+
+      alert("Please drop a PNG image.");
+
+      return;
+    }
+
+    selectedFile = file;
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
+
+  });
+
+
+  compressBtn.addEventListener("click", async function() {
+
+    if (!selectedFile) {
+      return;
+    }
+
+    compressBtn.disabled = true;
+    compressBtn.textContent = "Compressing...";
+
+    try {
+
+      const compressedBlob = await compressImage(
+        selectedFile
+      );
+
+      const originalSize = selectedFile.size;
+      const compressedSize = compressedBlob.size;
+
+      let reduction = 0;
+
+      if (originalSize > 0) {
+
+        reduction =
+          ((originalSize - compressedSize) / originalSize) * 100;
+
+      }
+
+      const url = URL.createObjectURL(compressedBlob);
+
+      results.innerHTML = `
+        <div class="result-card">
+
+          <strong>
+            ${escapeHTML(selectedFile.name)}
+          </strong>
+
+          <p>
+            Original size:
+            ${formatBytes(originalSize)}
+          </p>
+
+          <p>
+            Processed size:
+            ${formatBytes(compressedSize)}
+          </p>
+
+          <p>
+            Size change:
+            ${reduction.toFixed(1)}%
+          </p>
+
+          <button
+            class="download-btn"
+            id="downloadBtn"
+          >
+            Download PNG
+          </button>
+
+        </div>
+      `;
+
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function() {
+
+          const link = document.createElement("a");
+
+          link.href = url;
+
+          link.download =
+            getBaseName(selectedFile.name) +
+            "-compressed.png";
+
+          document.body.appendChild(link);
+
+          link.click();
+
+          link.remove();
+
+        });
+
+    } catch (error) {
+
+      alert("Something went wrong while processing the PNG image.");
+
+      console.error(error);
+
+    }
+
+    compressBtn.disabled = false;
+    compressBtn.textContent = "Compress PNG";
+
+  });
+
+
+  function compressImage(file) {
+
+    return new Promise(function(resolve, reject) {
+
+      const image = new Image();
+
+      const objectUrl = URL.createObjectURL(file);
+
+      image.onload = function() {
+
+        const canvas = document.createElement("canvas");
+
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        const context = canvas.getContext("2d");
+
+        context.drawImage(
+          image,
+          0,
+          0,
+          image.width,
+          image.height
+        );
+
+        canvas.toBlob(
+          function(blob) {
+
+            URL.revokeObjectURL(objectUrl);
+
+            if (blob) {
+
+              resolve(blob);
+
+            } else {
+
+              reject(
+                new Error("PNG processing failed.")
+              );
+
+            }
+
+          },
+          "image/png"
+        );
+
+      };
+
+
+      image.onerror = function() {
+
+        URL.revokeObjectURL(objectUrl);
+
+        reject(
+          new Error("Could not read PNG image.")
+        );
+
+      };
+
+
+      image.src = objectUrl;
+
+    });
+
+  }
+
+
+  function formatBytes(bytes) {
+
+    if (bytes === 0) {
+      return "0 Bytes";
+    }
+
+    const units = [
+      "Bytes",
+      "KB",
+      "MB",
+      "GB"
+    ];
+
+    const index =
+      Math.floor(
+        Math.log(bytes) / Math.log(1024)
+      );
+
+    return (
+      parseFloat(
+        (bytes / Math.pow(1024, index)).toFixed(2)
+      ) +
+      " " +
+      units[index]
+    );
+
+  }
+
+
+  function getBaseName(filename) {
+
+    return filename.replace(/\.[^/.]+$/, "");
+
+  }
+
+
+  function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+  }
+
+</script>
 
 </body>
 </html>
