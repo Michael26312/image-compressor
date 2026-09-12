@@ -1,264 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta name="google-site-verification" content="k7MQL1jXPdVfLjyHLAeS8Y8Y-y5WizJmyNq6MfEju1k" />
-
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Compress JPG Online Free – Reduce JPG File Size</title>
 
-  <meta name="description" content="Compress JPG images online for free. Reduce JPG file size while keeping good image quality. No upload required.">
+  <meta name="description" content="Compress JPG images online for free. Reduce JPG file size while keeping good image quality. Fast, private, and no upload required.">
+
+  <meta name="keywords" content="compress JPG, JPG compressor, compress JPEG, reduce JPG file size, JPG image compressor, resize JPG online">
 
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://michael26312.github.io/image-compressor/compress-jpg.html">
 
-  <style>
+  <meta property="og:title" content="Compress JPG Online Free – Reduce JPG File Size">
+  <meta property="og:description" content="Compress JPG images online for free. Reduce JPG file size while keeping good image quality. No upload required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michael26312.github.io/image-compressor/compress-jpg.html">
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compress JPG Online Free">
+  <meta name="twitter:description" content="Reduce JPG image file size online for free. Fast, private and browser-based.">
+
+  <meta name="google-site-verification" content="k7MQL1jXPdVfLjyHLAeS8Y8Y-y5WizJmyNq6MfEju1k">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free JPG Compressor",
+    "url": "https://michael26312.github.io/image-compressor/compress-jpg.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern web browser",
+    "description": "A free online JPG image compressor that reduces JPG file size directly in the browser.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Compress JPG images",
+      "Reduce JPG file size",
+      "Adjust image quality",
+      "Process images in the browser",
+      "No image upload required"
+    ]
+  }
+  </script>
+
+  <style>
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #2563eb;
+      background: #1769e0;
       color: white;
-      padding: 35px 20px;
+      padding: 18px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 50px;
+    }
+
+    .hero {
       text-align: center;
+      margin-bottom: 30px;
     }
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+      color: #111827;
     }
 
-    header p {
-      margin: 0;
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #4b5563;
       font-size: 17px;
     }
 
-    .container {
-      max-width: 850px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .tool,
-    .info {
+    .compressor-box {
       background: white;
+      border-radius: 14px;
       padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .upload-box {
-      border: 3px dashed #2563eb;
-      border-radius: 14px;
-      padding: 35px 20px;
-      background: #f8fafc;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
       text-align: center;
-      margin: 20px 0;
+      margin-bottom: 35px;
     }
 
-    #imageInput {
+    .upload-area {
+      border: 2px dashed #1769e0;
+      border-radius: 12px;
+      padding: 35px 20px;
+      cursor: pointer;
+      background: #f8fbff;
+      transition: 0.2s;
+    }
+
+    .upload-area:hover {
+      background: #eef5ff;
+    }
+
+    .upload-area p {
+      margin: 8px 0;
+    }
+
+    .upload-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1769e0;
+    }
+
+    input[type="file"] {
       display: none;
     }
 
-    .upload-button,
-    button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 13px 24px;
+    .choose-btn,
+    .compress-btn,
+    .download-btn {
       border: none;
       border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
+      padding: 12px 20px;
       cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .upload-note {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    .quality-label {
-      display: block;
+      font-size: 15px;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 12px;
     }
 
-    #quality {
+    .choose-btn {
+      background: #1769e0;
+      color: white;
+    }
+
+    .compress-btn {
+      background: #16a34a;
+      color: white;
       width: 100%;
     }
 
+    .compress-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .quality-box {
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    .quality-box label {
+      font-weight: bold;
+    }
+
     #qualityValue {
-      color: #2563eb;
+      font-weight: bold;
+      color: #1769e0;
     }
 
-    #result {
-      margin-top: 25px;
-      text-align: center;
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
     }
 
-    .download {
-      background: #16a34a;
-    }
-
-    .info {
-      margin-top: 25px;
-    }
-
-    .info h2 {
-      color: #1d4ed8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #64748b;
+    #fileInfo {
+      margin-top: 15px;
+      color: #4b5563;
       font-size: 14px;
     }
 
-  </style>
+    #results {
+      margin-top: 25px;
+      text-align: left;
+    }
 
+    .result-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #fafafa;
+    }
+
+    .result-card strong {
+      display: block;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+
+    .result-card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .download-btn {
+      background: #111827;
+      color: white;
+      width: 100%;
+    }
+
+    .content-section {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .content-section h2 {
+      color: #111827;
+      margin-top: 0;
+    }
+
+    .content-section h3 {
+      color: #1769e0;
+    }
+
+    .content-section a {
+      color: #1769e0;
+      font-weight: bold;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .benefit h3 {
+      margin-top: 0;
+      color: #1769e0;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .compressor-box,
+      .content-section {
+        padding: 20px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
+  <div class="header-inner">
 
-  <h1>Compress JPG Online</h1>
+    <a class="logo" href="index.html">
+      Free Image Compressor
+    </a>
 
-  <p>
-    Reduce JPG file size quickly and easily for free.
-  </p>
+    <nav>
+      <a href="index.html">Image Compressor</a>
+      <a href="compress-jpg.html">Compress JPG</a>
+      <a href="compress-png.html">Compress PNG</a>
+      <a href="compress-webp.html">Compress WebP</a>
+    </nav>
 
+  </div>
 </header>
 
-<main class="container">
+<main>
 
-  <section class="tool">
-
-    <h2>Free JPG Compressor</h2>
+  <section class="hero">
+    <h1>Compress JPG Online Free</h1>
 
     <p>
-      Select a JPG image, choose your compression quality,
-      and download a smaller JPG file.
+      Reduce JPG and JPEG image file sizes online for free.
+      Adjust image quality and compress your photos directly in your browser.
+      No upload or account is required.
     </p>
+  </section>
 
-    <div class="upload-box">
 
-      <div style="font-size:45px;">📷</div>
+  <section class="compressor-box">
 
-      <h3>Select Your JPG Image</h3>
+    <div class="upload-area" id="uploadArea">
 
-      <label for="imageInput" class="upload-button">
+      <div class="upload-title">
+        Choose a JPG Image
+      </div>
+
+      <p>
+        Select a JPG or JPEG image from your device.
+      </p>
+
+      <label class="choose-btn" for="fileInput">
         Choose JPG Image
       </label>
 
       <input
         type="file"
-        id="imageInput"
+        id="fileInput"
         accept="image/jpeg"
       >
 
-      <p class="upload-note">
-        JPG and JPEG files supported
-      </p>
+    </div>
+
+
+    <div id="fileInfo">
+      No image selected.
+    </div>
+
+
+    <div class="quality-box">
+
+      <label for="quality">
+        Compression Quality:
+        <span id="qualityValue">70%</span>
+      </label>
+
+      <input
+        type="range"
+        id="quality"
+        min="10"
+        max="100"
+        value="70"
+      >
 
     </div>
 
-    <label class="quality-label">
 
-      Compression Quality:
-      <span id="qualityValue">70%</span>
-
-    </label>
-
-    <input
-      type="range"
-      id="quality"
-      min="10"
-      max="100"
-      value="70"
+    <button
+      class="compress-btn"
+      id="compressBtn"
+      disabled
     >
-
-    <br>
-
-    <button id="compressBtn">
       Compress JPG
     </button>
 
-    <div id="result"></div>
+
+    <div
+      id="results"
+      aria-live="polite"
+    ></div>
 
   </section>
 
 
-  <section class="info">
+  <section class="benefits">
 
-    <h2>Compress JPG Online for Free</h2>
+    <div class="benefit">
+      <h3>Free</h3>
+      <p>
+        Compress JPG images without paying for a subscription.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Private</h3>
+      <p>
+        Your image is processed directly in your browser.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>Easy</h3>
+      <p>
+        Choose an image, select quality and download the compressed JPG.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>What Is a JPG Compressor?</h2>
 
     <p>
-      Use this free JPG compressor to reduce the file size
-      of your JPEG images without installing software.
+      A JPG compressor reduces the file size of a JPG or JPEG image.
+      Smaller image files are easier to store, share and upload to websites,
+      social media platforms and online services.
     </p>
-
-    <h2>Why Compress JPG Images?</h2>
 
     <p>
-      Large JPG files can take longer to upload, send and load
-      on websites. Compressing JPG images can reduce file size
-      and help save storage and bandwidth.
+      This free JPG compressor lets you adjust the compression quality
+      before creating a smaller JPG file.
     </p>
 
-    <h2>How to Compress a JPG</h2>
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>How to Compress a JPG Image</h2>
 
     <ol>
-
-      <li>Select a JPG or JPEG image.</li>
-
-      <li>Choose your preferred compression quality.</li>
-
-      <li>Click "Compress JPG".</li>
-
+      <li>Choose a JPG or JPEG image from your device.</li>
+      <li>Select your preferred compression quality.</li>
+      <li>Click the <strong>Compress JPG</strong> button.</li>
+      <li>Compare the original and compressed file sizes.</li>
       <li>Download your compressed JPG image.</li>
-
     </ol>
 
-    <h2>Is My JPG Uploaded?</h2>
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Why Reduce JPG File Size?</h2>
 
     <p>
-      No. Your image is processed directly in your web browser.
-      The image does not need to be uploaded to a server.
+      Large image files can take longer to upload, download and share.
+      Compressing JPG images can help reduce storage requirements and
+      improve website loading performance.
     </p>
 
-    <h2>Free JPEG Compressor</h2>
+    <p>
+      Smaller images can also be useful when a website, email service or
+      online application has a maximum file-size limit.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Is My JPG Image Uploaded?</h2>
 
     <p>
-      JPG and JPEG are commonly used image formats for photographs
-      and digital images. This tool helps reduce their file size
-      while maintaining useful image quality.
+      No. The compression process happens directly inside your web browser.
+      Your JPG image does not need to be uploaded to a remote server.
+    </p>
+
+    <p>
+      This makes the tool convenient for users who want a quick way to
+      compress images while keeping their files on their own device.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Compress JPG, PNG and WebP Images</h2>
+
+    <p>
+      Need to compress another image format?
+      Try our other free image compression tools:
+    </p>
+
+    <p>
+      <a href="compress-png.html">Compress PNG images</a>
+    </p>
+
+    <p>
+      <a href="compress-webp.html">Compress WebP images</a>
+    </p>
+
+    <p>
+      Or return to the
+      <a href="index.html">free image compressor homepage</a>.
+    </p>
+
+  </section>
+
+
+  <section class="content-section">
+
+    <h2>Who Can Use This JPG Compressor?</h2>
+
+    <p>
+      This tool can be useful for students, bloggers, website owners,
+      photographers, social media users, businesses and anyone who needs
+      to reduce JPG image file sizes.
+    </p>
+
+    <p>
+      Because it works in a modern web browser, you can use it on a
+      computer, tablet or smartphone.
     </p>
 
   </section>
 
 </main>
 
+
 <footer>
 
   <p>
-    Free Image Compressor — Compress JPG, PNG and WebP images online.
+    © 2026 Free Image Compressor
+  </p>
+
+  <p>
+    <a href="index.html">Home</a>
+    <a href="compress-jpg.html">JPG</a>
+    <a href="compress-png.html">PNG</a>
+    <a href="compress-webp.html">WebP</a>
   </p>
 
 </footer>
@@ -266,175 +580,301 @@
 
 <script>
 
-  const imageInput =
-    document.getElementById("imageInput");
+  const fileInput = document.getElementById("fileInput");
+  const uploadArea = document.getElementById("uploadArea");
+  const quality = document.getElementById("quality");
+  const qualityValue = document.getElementById("qualityValue");
+  const compressBtn = document.getElementById("compressBtn");
+  const fileInfo = document.getElementById("fileInfo");
+  const results = document.getElementById("results");
 
-  const quality =
-    document.getElementById("quality");
-
-  const qualityValue =
-    document.getElementById("qualityValue");
-
-  const compressBtn =
-    document.getElementById("compressBtn");
-
-  const result =
-    document.getElementById("result");
+  let selectedFile = null;
 
 
   quality.addEventListener("input", function() {
+    qualityValue.textContent = quality.value + "%";
+  });
 
-    qualityValue.textContent =
-      quality.value + "%";
+
+  fileInput.addEventListener("change", function() {
+
+    if (!fileInput.files.length) {
+      return;
+    }
+
+    selectedFile = fileInput.files[0];
+
+    if (selectedFile.type !== "image/jpeg") {
+
+      alert("Please select a JPG or JPEG image.");
+
+      selectedFile = null;
+      compressBtn.disabled = true;
+      fileInfo.textContent = "No valid JPG image selected.";
+
+      return;
+    }
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
 
   });
 
 
-  compressBtn.addEventListener("click", function() {
+  uploadArea.addEventListener("dragover", function(event) {
 
-    const file =
-      imageInput.files[0];
+    event.preventDefault();
+
+    uploadArea.style.background = "#eef5ff";
+
+  });
+
+
+  uploadArea.addEventListener("dragleave", function() {
+
+    uploadArea.style.background = "#f8fbff";
+
+  });
+
+
+  uploadArea.addEventListener("drop", function(event) {
+
+    event.preventDefault();
+
+    uploadArea.style.background = "#f8fbff";
+
+    const file = event.dataTransfer.files[0];
 
     if (!file) {
-
-      result.innerHTML =
-        "<p>Please select a JPG image first.</p>";
-
       return;
-
     }
-
 
     if (file.type !== "image/jpeg") {
 
-      result.innerHTML =
-        "<p>Please select a JPG or JPEG image.</p>";
+      alert("Please drop a JPG or JPEG image.");
 
       return;
+    }
+
+    selectedFile = file;
+
+    fileInfo.textContent =
+      selectedFile.name +
+      " — " +
+      formatBytes(selectedFile.size);
+
+    compressBtn.disabled = false;
+
+    results.innerHTML = "";
+
+  });
+
+
+  compressBtn.addEventListener("click", async function() {
+
+    if (!selectedFile) {
+      return;
+    }
+
+    compressBtn.disabled = true;
+    compressBtn.textContent = "Compressing...";
+
+    try {
+
+      const compressedBlob = await compressImage(
+        selectedFile,
+        Number(quality.value) / 100
+      );
+
+      const originalSize = selectedFile.size;
+      const compressedSize = compressedBlob.size;
+
+      let reduction = 0;
+
+      if (originalSize > 0) {
+        reduction =
+          ((originalSize - compressedSize) / originalSize) * 100;
+      }
+
+      const url = URL.createObjectURL(compressedBlob);
+
+      results.innerHTML = `
+        <div class="result-card">
+
+          <strong>
+            ${escapeHTML(selectedFile.name)}
+          </strong>
+
+          <p>
+            Original size:
+            ${formatBytes(originalSize)}
+          </p>
+
+          <p>
+            Compressed size:
+            ${formatBytes(compressedSize)}
+          </p>
+
+          <p>
+            Size reduction:
+            ${reduction.toFixed(1)}%
+          </p>
+
+          <button
+            class="download-btn"
+            id="downloadBtn"
+          >
+            Download Compressed JPG
+          </button>
+
+        </div>
+      `;
+
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function() {
+
+          const link = document.createElement("a");
+
+          link.href = url;
+
+          link.download =
+            getBaseName(selectedFile.name) +
+            "-compressed.jpg";
+
+          document.body.appendChild(link);
+
+          link.click();
+
+          link.remove();
+
+        });
+
+    } catch (error) {
+
+      alert("Something went wrong while compressing the image.");
+
+      console.error(error);
 
     }
 
+    compressBtn.disabled = false;
+    compressBtn.textContent = "Compress JPG";
 
-    result.innerHTML =
-      "<p>Compressing JPG...</p>";
-
-
-    const reader =
-      new FileReader();
+  });
 
 
-    reader.onload = function(event) {
+  function compressImage(file, qualityValue) {
 
-      const img =
-        new Image();
+    return new Promise(function(resolve, reject) {
 
+      const image = new Image();
 
-      img.onload = function() {
+      const objectUrl = URL.createObjectURL(file);
 
-        const canvas =
-          document.createElement("canvas");
+      image.onload = function() {
 
-        const ctx =
-          canvas.getContext("2d");
+        const canvas = document.createElement("canvas");
 
+        canvas.width = image.width;
+        canvas.height = image.height;
 
-        canvas.width =
-          img.width;
+        const context = canvas.getContext("2d");
 
-        canvas.height =
-          img.height;
-
-
-        ctx.drawImage(
-          img,
+        context.drawImage(
+          image,
           0,
-          0
+          0,
+          image.width,
+          image.height
         );
 
+        canvas.toBlob(
+          function(blob) {
 
-        const compressionQuality =
-          Number(quality.value) / 100;
+            URL.revokeObjectURL(objectUrl);
 
+            if (blob) {
+              resolve(blob);
+            } else {
+              reject(new Error("Compression failed."));
+            }
 
-        canvas.toBlob(function(blob) {
-
-          if (!blob) {
-
-            result.innerHTML =
-              "<p>Compression failed. Please try another JPG.</p>";
-
-            return;
-
-          }
-
-
-          const originalKB =
-            (file.size / 1024).toFixed(1);
-
-
-          const compressedKB =
-            (blob.size / 1024).toFixed(1);
-
-
-          const reduction =
-            Math.max(
-              0,
-              (
-                (file.size - blob.size) /
-                file.size *
-                100
-              )
-            ).toFixed(1);
-
-
-          const url =
-            URL.createObjectURL(blob);
-
-
-          result.innerHTML =
-
-            "<h3>Compression Complete!</h3>" +
-
-            "<p><strong>Original:</strong> " +
-            originalKB +
-            " KB</p>" +
-
-            "<p><strong>Compressed:</strong> " +
-            compressedKB +
-            " KB</p>" +
-
-            "<p><strong>Size reduced by:</strong> " +
-            reduction +
-            "%</p>" +
-
-            "<a href='" +
-            url +
-            "' download='compressed-" +
-            file.name.replace(/\.[^/.]+$/, "") +
-            ".jpg'>" +
-
-            "<button class='download'>" +
-            "Download Compressed JPG" +
-            "</button>" +
-
-            "</a>";
-
-        }, "image/jpeg", compressionQuality);
+          },
+          "image/jpeg",
+          qualityValue
+        );
 
       };
 
+      image.onerror = function() {
 
-      img.src =
-        event.target.result;
+        URL.revokeObjectURL(objectUrl);
 
-    };
+        reject(new Error("Could not read image."));
+
+      };
+
+      image.src = objectUrl;
+
+    });
+
+  }
 
 
-    reader.readAsDataURL(file);
+  function formatBytes(bytes) {
 
-  });
+    if (bytes === 0) {
+      return "0 Bytes";
+    }
+
+    const units = [
+      "Bytes",
+      "KB",
+      "MB",
+      "GB"
+    ];
+
+    const index =
+      Math.floor(
+        Math.log(bytes) / Math.log(1024)
+      );
+
+    return (
+      parseFloat(
+        (bytes / Math.pow(1024, index)).toFixed(2)
+      ) +
+      " " +
+      units[index]
+    );
+
+  }
+
+
+  function getBaseName(filename) {
+
+    return filename.replace(/\.[^/.]+$/, "");
+
+  }
+
+
+  function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+  }
 
 </script>
 
 </body>
-  </html>
+</html>
