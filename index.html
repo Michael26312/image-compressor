@@ -303,6 +303,10 @@
       margin: 0 8px;
     }
 
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 700px) {
 
       header h1 {
@@ -386,6 +390,10 @@
   <a href="compress-png.html">Compress PNG</a>
 
   <a href="compress-webp.html">Compress WebP</a>
+
+  <a href="about.html">About</a>
+
+  <a href="privacy.html">Privacy</a>
 
 </nav>
 
@@ -598,6 +606,8 @@
     <a href="compress-jpg.html">JPG Compressor</a>
     <a href="compress-png.html">PNG Compressor</a>
     <a href="compress-webp.html">WebP Compressor</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
   </p>
 
 </footer>
@@ -1101,26 +1111,4 @@
 
             setTimeout(
               resolve,
-              300
-            );
-
-          }
-        );
-
-      }
-
-    }
-  );
-
-
-  function escapeHTML(text) {
-
-    const div =
-      document.createElement("div");
-
-
-    div.textContent =
-      text;
-
-
-    return div.innerH
+        
