@@ -1,76 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Free Image Compressor Online – JPG, PNG & WebP</title>
 
-  <meta
-    name="description"
-    content="Compress JPG, PNG and WebP images online for free. Reduce image file size quickly in your browser without uploading your images."
-  >
+  <meta name="description"
+    content="Compress JPG, PNG and WebP images online for free. Reduce image file size quickly in your browser without uploading your images.">
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index, follow">
 
-  <link
-    rel="canonical"
-    href="https://michael26312.github.io/image-compressor/"
-  >
+  <link rel="canonical"
+    href="https://michael26312.github.io/image-compressor/">
 
-  <!-- Open Graph -->
+  <meta property="og:title"
+    content="Free Image Compressor Online">
+
+  <meta property="og:description"
+    content="Compress JPG, PNG and WebP images online for free. Fast, private and easy to use.">
+
+  <meta property="og:url"
+    content="https://michael26312.github.io/image-compressor/">
+
   <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="Free Image Compressor Online – JPG, PNG & WebP"
-  >
-  <meta
-    property="og:description"
-    content="Compress JPG, PNG and WebP images online for free. Fast, private and browser-based."
-  >
-  <meta
-    property="og:url"
-    content="https://michael26312.github.io/image-compressor/"
-  >
 
-  <!-- Twitter / social sharing -->
-  <meta
-    name="twitter:card"
-    content="summary"
-  >
-  <meta
-    name="twitter:title"
-    content="Free Image Compressor Online"
-  >
-  <meta
-    name="twitter:description"
-    content="Compress JPG, PNG and WebP images online for free."
-  >
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Free Image Compressor",
-    "url": "https://michael26312.github.io/image-compressor/",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Any",
-    "description": "A free browser-based image compressor for JPG, PNG and WebP images.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
+  <meta name="twitter:card" content="summary">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -80,7 +37,6 @@
       font-family: Arial, sans-serif;
       background: #f4f7fb;
       color: #172033;
-      line-height: 1.6;
     }
 
     header {
@@ -93,17 +49,15 @@
     header h1 {
       margin: 0 0 10px;
       font-size: 32px;
-      line-height: 1.2;
     }
 
     header p {
       margin: 0;
       font-size: 16px;
-      opacity: 0.95;
     }
 
     .container {
-      max-width: 760px;
+      max-width: 700px;
       margin: 30px auto;
       padding: 0 18px;
     }
@@ -116,7 +70,6 @@
     }
 
     .upload-area {
-      display: block;
       border: 2px dashed #2563eb;
       border-radius: 15px;
       padding: 35px 20px;
@@ -225,25 +178,20 @@
       color: #667085;
     }
 
-    .info {
+    .seo-content {
       margin-top: 30px;
-      background: white;
-      border-radius: 18px;
-      padding: 25px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      line-height: 1.6;
     }
 
-    .info h2 {
+    .seo-content h2 {
       font-size: 22px;
-      margin-top: 0;
     }
 
-    .info h3 {
+    .seo-content h3 {
       font-size: 18px;
-      margin-bottom: 5px;
     }
 
-    .info a {
+    .seo-content a {
       color: #2563eb;
       font-weight: bold;
     }
@@ -255,56 +203,43 @@
       font-size: 13px;
     }
 
-    @media (max-width: 600px) {
+    footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
 
+    @media (max-width: 600px) {
       header h1 {
         font-size: 27px;
       }
 
-      .card,
-      .info {
+      .card {
         padding: 18px;
       }
-
     }
-
   </style>
-
 </head>
 
 <body>
 
 <header>
-
-  <h1>🖼️ Free Image Compressor Online</h1>
-
-  <p>
-    Compress JPG, PNG and WebP images quickly and privately.
-  </p>
-
+  <h1>🖼️ Free Image Compressor</h1>
+  <p>Compress JPG, PNG and WebP images online for free.</p>
 </header>
 
+<div class="container">
 
-<main class="container">
+  <div class="card">
 
-  <section class="card" aria-label="Image compressor">
-
-    <label
-      for="imageInput"
-      class="upload-area"
-    >
+    <label for="imageInput" class="upload-area">
 
       <div class="upload-icon">📷</div>
 
       <h2>Choose an Image</h2>
 
-      <p>
-        JPG, PNG or WebP
-      </p>
+      <p>JPG, PNG or WebP</p>
 
-      <span class="button">
-        Select Image
-      </span>
+      <span class="button">Select Image</span>
 
     </label>
 
@@ -314,14 +249,11 @@
       accept="image/jpeg,image/png,image/webp"
     >
 
-
     <div class="settings">
 
-      <label for="quality">
-
+      <label>
         Compression Quality:
         <span id="qualityValue">70%</span>
-
       </label>
 
       <input
@@ -330,23 +262,15 @@
         min="10"
         max="100"
         value="70"
-        aria-label="Compression quality"
       >
 
     </div>
 
+    <div class="preview" id="preview">
 
-    <div
-      class="preview"
-      id="preview"
-    >
+      <h3>Preview</h3>
 
-      <h3>Compressed Image Preview</h3>
-
-      <img
-        id="previewImage"
-        alt="Compressed image preview"
-      >
+      <img id="previewImage" alt="Compressed image preview">
 
       <div class="stats">
 
@@ -362,420 +286,320 @@
 
         <div>
           Saved:
-          <strong
-            class="success"
-            id="saved"
-          >
-            -
-          </strong>
+          <strong class="success" id="saved">-</strong>
         </div>
 
       </div>
 
-
-      <button
-        class="button"
-        id="downloadBtn"
-        type="button"
-      >
+      <button class="button" id="downloadBtn">
         ⬇️ Download Compressed Image
       </button>
 
     </div>
 
-
     <div class="privacy">
-
       🔒 Your image is processed directly in your browser.
-      Your image is not uploaded to a server.
-
+      It is not uploaded to a server.
     </div>
 
-  </section>
+  </div>
 
-
-  <section class="info">
+  <div class="seo-content">
 
     <h2>Free Online Image Compressor</h2>
 
     <p>
-      Reduce the file size of your images quickly and easily with
-      this free online image compressor. You can compress JPG,
-      PNG and WebP images directly in your browser.
+      Compress your images quickly and easily with our free online image
+      compressor. Reduce image file size directly in your browser without
+      uploading your images to a server.
     </p>
 
     <h3>Compress JPG Images</h3>
 
     <p>
-      Reduce the size of JPG and JPEG photos for websites,
-      email, social media and online forms.
+      Reduce the size of JPG and JPEG images while maintaining good image
+      quality. JPG compression is useful for photographs, websites,
+      social media and email attachments.
     </p>
 
     <h3>Compress PNG Images</h3>
 
     <p>
-      Reduce PNG image file sizes while keeping the PNG format.
-      PNG files with transparency can continue to use transparency.
+      Compress PNG images directly in your browser. PNG images are useful
+      for graphics, screenshots, logos and images that require transparency.
     </p>
 
     <h3>Compress WebP Images</h3>
 
     <p>
-      Compress WebP images directly in your browser without
-      sending your image to a remote server.
+      Reduce WebP image file sizes for faster websites and easier sharing.
+      WebP is a modern image format designed to provide smaller files
+      while maintaining good visual quality.
     </p>
 
-    <h3>Private Browser-Based Compression</h3>
+  </div>
 
-    <p>
-      Your selected image is processed locally in your browser.
-      The image does not need to be uploaded to our server.
-    </p>
-
-    <p>
-      Learn more on our
-      <a href="about.html">About page</a>
-      or read our
-      <a href="privacy.html">Privacy Policy</a>.
-    </p>
-
-  </section>
-
-</main>
-
+</div>
 
 <footer>
 
   © 2026 Free Image Compressor
 
-</footer>
+  <br><br>
 
+  <a href="about.html">About</a>
+  &nbsp; | &nbsp;
+  <a href="privacy.html">Privacy</a>
+
+</footer>
 
 <script>
 
-const imageInput =
-  document.getElementById("imageInput");
+const imageInput = document.getElementById("imageInput");
+const quality = document.getElementById("quality");
+const qualityValue = document.getElementById("qualityValue");
 
-const quality =
-  document.getElementById("quality");
+const preview = document.getElementById("preview");
+const previewImage = document.getElementById("previewImage");
 
-const qualityValue =
-  document.getElementById("qualityValue");
+const originalSize = document.getElementById("originalSize");
+const compressedSize = document.getElementById("compressedSize");
+const saved = document.getElementById("saved");
 
-const preview =
-  document.getElementById("preview");
-
-const previewImage =
-  document.getElementById("previewImage");
-
-const originalSize =
-  document.getElementById("originalSize");
-
-const compressedSize =
-  document.getElementById("compressedSize");
-
-const saved =
-  document.getElementById("saved");
-
-const downloadBtn =
-  document.getElementById("downloadBtn");
-
+const downloadBtn = document.getElementById("downloadBtn");
 
 let compressedBlob = null;
-
-let originalFileName =
-  "compressed-image";
-
-
-let originalMimeType =
-  "image/jpeg";
+let originalFileName = "compressed-image";
+let originalExtension = "jpg";
+let currentObjectURL = null;
 
 
-quality.addEventListener(
-  "input",
-  function() {
+/* Quality slider */
 
-    qualityValue.textContent =
-      quality.value + "%";
+quality.addEventListener("input", function() {
 
-    if (imageInput.files.length > 0) {
+  qualityValue.textContent = quality.value + "%";
 
-      compressImage(
-        imageInput.files[0]
-      );
-
-    }
-
+  if (imageInput.files.length > 0) {
+    compressImage(imageInput.files[0]);
   }
-);
+
+});
 
 
-imageInput.addEventListener(
-  "change",
-  function() {
+/* Image selection */
 
-    const file =
-      imageInput.files[0];
+imageInput.addEventListener("change", function() {
 
-    if (!file) {
-      return;
-    }
+  const file = imageInput.files[0];
 
-
-    if (
-      ![
-        "image/jpeg",
-        "image/png",
-        "image/webp"
-      ].includes(file.type)
-    ) {
-
-      alert(
-        "Please select a JPG, PNG or WebP image."
-      );
-
-      imageInput.value = "";
-
-      return;
-    }
-
-
-    originalFileName =
-      file.name.replace(
-        /\.[^/.]+$/,
-        ""
-      );
-
-
-    originalMimeType =
-      file.type;
-
-
-    compressImage(file);
-
+  if (!file) {
+    return;
   }
-);
 
+  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+
+    alert("Please select a JPG, PNG or WebP image.");
+
+    imageInput.value = "";
+
+    return;
+  }
+
+  originalFileName = file.name
+    .replace(/\.[^/.]+$/, "");
+
+  if (file.type === "image/png") {
+    originalExtension = "png";
+  }
+  else if (file.type === "image/webp") {
+    originalExtension = "webp";
+  }
+  else {
+    originalExtension = "jpg";
+  }
+
+  compressImage(file);
+
+});
+
+
+/* Compression */
 
 function compressImage(file) {
 
-  const reader =
-    new FileReader();
+  const reader = new FileReader();
+
+  reader.onload = function(event) {
+
+    const img = new Image();
+
+    img.onload = function() {
+
+      const canvas = document.createElement("canvas");
+
+      const ctx = canvas.getContext("2d");
+
+      let width = img.width;
+      let height = img.height;
+
+      const maxDimension = 2500;
+
+      if (width > maxDimension || height > maxDimension) {
+
+        if (width > height) {
+
+          height = Math.round(
+            height * maxDimension / width
+          );
+
+          width = maxDimension;
+
+        } else {
+
+          width = Math.round(
+            width * maxDimension / height
+          );
+
+          height = maxDimension;
+
+        }
+
+      }
+
+      canvas.width = width;
+      canvas.height = height;
 
 
-  reader.onload =
-    function(event) {
+      /*
+        PNG and WebP can support transparency.
+        JPEG cannot.
 
-      const img =
-        new Image();
+        Therefore we only add a white background
+        when converting to JPEG.
+      */
 
+      if (file.type === "image/jpeg") {
 
-      img.onload =
-        function() {
+        ctx.fillStyle = "#ffffff";
 
-          const canvas =
-            document.createElement("canvas");
+        ctx.fillRect(
+          0,
+          0,
+          width,
+          height
+        );
 
-          const ctx =
-            canvas.getContext("2d");
+      }
 
-
-          let width =
-            img.width;
-
-          let height =
-            img.height;
-
-
-          const maxDimension =
-            2500;
-
-
-          if (
-            width > maxDimension ||
-            height > maxDimension
-          ) {
-
-            if (width > height) {
-
-              height =
-                Math.round(
-                  height *
-                  maxDimension /
-                  width
-                );
-
-              width =
-                maxDimension;
-
-            } else {
-
-              width =
-                Math.round(
-                  width *
-                  maxDimension /
-                  height
-                );
-
-              height =
-                maxDimension;
-
-            }
-
-          }
+      ctx.drawImage(
+        img,
+        0,
+        0,
+        width,
+        height
+      );
 
 
-          canvas.width =
-            width;
+      let outputType = file.type;
 
-          canvas.height =
-            height;
+      /*
+        PNG does not use JPEG-style quality.
+        For PNG, the browser creates a lossless PNG.
 
+        JPG and WebP use the quality slider.
+      */
 
-          /*
-            PNG and WebP may contain transparency.
-            Only fill the canvas for JPEG.
-          */
+      let outputQuality =
+        parseInt(quality.value) / 100;
 
-          if (
-            originalMimeType ===
-            "image/jpeg"
-          ) {
+      canvas.toBlob(
 
-            ctx.fillStyle =
-              "#ffffff";
+        function(blob) {
 
-            ctx.fillRect(
-              0,
-              0,
-              width,
-              height
+          if (!blob) {
+
+            alert(
+              "Compression failed. Please try another image."
             );
 
+            return;
+          }
+
+          compressedBlob = blob;
+
+
+          if (currentObjectURL) {
+            URL.revokeObjectURL(currentObjectURL);
+          }
+
+          currentObjectURL =
+            URL.createObjectURL(blob);
+
+          previewImage.src =
+            currentObjectURL;
+
+          preview.style.display =
+            "block";
+
+          originalSize.textContent =
+            formatBytes(file.size);
+
+          compressedSize.textContent =
+            formatBytes(blob.size);
+
+
+          let percentage =
+            ((file.size - blob.size) / file.size) * 100;
+
+
+          if (percentage < 0) {
+            percentage = 0;
           }
 
 
-          ctx.drawImage(
-            img,
-            0,
-            0,
-            width,
-            height
-          );
+          saved.textContent =
+            percentage.toFixed(1) + "%";
 
 
-          const compressionQuality =
-            parseInt(
-              quality.value
-            ) / 100;
+          downloadBtn.style.display =
+            "block";
 
+        },
 
-          let outputType =
-            originalMimeType;
+        outputType,
 
+        outputType === "image/png"
+          ? undefined
+          : outputQuality
 
-          /*
-            Canvas supports JPEG, PNG and WebP.
-          */
-
-          if (
-            outputType !== "image/jpeg" &&
-            outputType !== "image/png" &&
-            outputType !== "image/webp"
-          ) {
-
-            outputType =
-              "image/jpeg";
-
-          }
-
-
-          canvas.toBlob(
-
-            function(blob) {
-
-              if (!blob) {
-
-                alert(
-                  "Compression failed. Please try another image."
-                );
-
-                return;
-
-              }
-
-
-              compressedBlob =
-                blob;
-
-
-              const compressedURL =
-                URL.createObjectURL(blob);
-
-
-              previewImage.src =
-                compressedURL;
-
-
-              preview.style.display =
-                "block";
-
-
-              originalSize.textContent =
-                formatBytes(
-                  file.size
-                );
-
-
-              compressedSize.textContent =
-                formatBytes(
-                  blob.size
-                );
-
-
-              let percentage =
-                (
-                  (
-                    file.size -
-                    blob.size
-                  ) /
-                  file.size
-                ) *
-                100;
-
-
-              if (
-                percentage < 0
-              ) {
-
-                percentage = 0;
-
-              }
-
-
-              saved.textContent =
-                percentage.toFixed(1) +
-                "%";
-
-
-              downloadBtn.style.display =
-                "block";
-
-            },
-
-            outputType,
-
-            compressionQuality
-
-          );
-
-        };
-
-
-      img.src =
-        event.target.result;
+      );
 
     };
+
+
+    img.onerror = function() {
+
+      alert(
+        "The image could not be opened. Please try another image."
+      );
+
+    };
+
+
+    img.src =
+      event.target.result;
+
+  };
+
+
+  reader.onerror = function() {
+
+    alert(
+      "The image could not be read. Please try again."
+    );
+
+  };
 
 
   reader.readAsDataURL(file);
@@ -783,92 +607,49 @@ function compressImage(file) {
 }
 
 
-downloadBtn.addEventListener(
-  "click",
-  function() {
+/* Download */
 
-    if (!compressedBlob) {
-      return;
-    }
+downloadBtn.addEventListener("click", function() {
 
-
-    const url =
-      URL.createObjectURL(
-        compressedBlob
-      );
-
-
-    const link =
-      document.createElement("a");
-
-
-    link.href =
-      url;
-
-
-    let extension =
-      "jpg";
-
-
-    if (
-      originalMimeType ===
-      "image/png"
-    ) {
-
-      extension =
-        "png";
-
-    } else if (
-      originalMimeType ===
-      "image/webp"
-    ) {
-
-      extension =
-        "webp";
-
-    }
-
-
-    link.download =
-      originalFileName +
-      "-compressed." +
-      extension;
-
-
-    document.body.appendChild(
-      link
-    );
-
-
-    link.click();
-
-
-    document.body.removeChild(
-      link
-    );
-
-
-    setTimeout(
-      function() {
-
-        URL.revokeObjectURL(
-          url
-        );
-
-      },
-      1000
-    );
-
+  if (!compressedBlob) {
+    return;
   }
-);
 
+  const url =
+    URL.createObjectURL(compressedBlob);
+
+  const link =
+    document.createElement("a");
+
+  link.href = url;
+
+  link.download =
+    originalFileName +
+    "-compressed." +
+    originalExtension;
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  setTimeout(function() {
+
+    URL.revokeObjectURL(url);
+
+  }, 1000);
+
+});
+
+
+/* File size */
 
 function formatBytes(bytes) {
 
   if (bytes === 0) {
     return "0 Bytes";
   }
-
 
   const units = [
     "Bytes",
@@ -877,34 +658,19 @@ function formatBytes(bytes) {
     "GB"
   ];
 
-
   const i =
     Math.floor(
-      Math.log(bytes) /
-      Math.log(1024)
+      Math.log(bytes) / Math.log(1024)
     );
 
-
   return (
-
     parseFloat(
-
-      (
-        bytes /
-        Math.pow(
-          1024,
-          i
-        )
-      ).toFixed(2)
-
+      (bytes / Math.pow(1024, i)).toFixed(2)
     )
-
     +
-
-    " " +
-
+    " "
+    +
     units[i]
-
   );
 
 }
@@ -912,4 +678,4 @@ function formatBytes(bytes) {
 </script>
 
 </body>
-</html>
+      </html>
